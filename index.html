@@ -12,6 +12,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Oleo de macaco</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #map {
+            height: 30rem;
+            width: 30rem;
+        }
+    </style>
 </head>
 <body>
     <h1>Coloque o fone</h1>
@@ -23,5 +37,23 @@
     </audio>
     <a href="https://github.com/777-world"><i class="fa-brands fa-github"></i></a>
     <h1>Hudson Boi</h1>
+
+        <div id="map"></div>
+        <script>
+
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: -5.092, lng: -42.8038 },
+                    zoom: 10
+                });
+            }
+        /*acessar: https://support.google.com/googleapi
+                    gerar o api 
+                    inserir no código
+                    */
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTAxXS8MTCbZrdJpJjjvc0kU-lyGWTEkg&callback=initMap" async
+            defer></script>
 </body>
 </html>
